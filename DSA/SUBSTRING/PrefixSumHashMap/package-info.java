@@ -1,6 +1,10 @@
 package java_collection.DSA.SUBSTRING.PrefixSumHashMap;
 
 /*
+
+🔹 Time Complexity: O(n) (Iterate once, use a hash map lookup).
+🔹 Space Complexity: O(n) (Storing prefix differences).
+
 Scenarios Where Prefix Sum + Hash Map is Used
     The Prefix Sum + Hash Map algorithm is particularly useful in scenarios where we need to efficiently find subarrays
     or substrings that satisfy a given condition. The main idea is to store the prefix sum at each index and use a hash

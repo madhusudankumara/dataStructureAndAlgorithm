@@ -1,11 +1,8 @@
 package java_collection.DSA;
 
-import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collector;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.LongStream;
 
 public class StreamApi {
     public static void main(String[] args) {
@@ -134,13 +131,81 @@ public class StreamApi {
 //                .sorted()
 //                .collect(Collectors.toList());
 //        System.out.println(commonList);
-        
+
+//        print all prime numbers between 1 and 100
+//        IntStream.rangeClosed(2, 100).filter(StreamApi::isPrime).forEach(System.out::println);
+
+//        reverse int list
+//        List<Integer> numbers = Arrays.asList(3, 10, 7, 1, 9);
+//        List<Integer> result = numbers.stream().collect(Collectors.collectingAndThen(Collectors.toList(), list -> {
+//            Collections.reverse(list);
+//            return list;
+//        }));
+//        System.out.println(result);
+
+//        Print name from list that starts with 'A'
+//        List<String> names = Arrays.asList("Alice", "Alya", "Bob", "David", "Eve");
+//        names.stream().filter(n -> n.startsWith("A")).forEach(System.out::printf);
+//        System.out.println(names.stream().filter(n -> n.startsWith("A")).collect(Collectors.joining(", ")));
+
+//         Print every char of all string
+//        List<String> names = Arrays.asList("Alice", "Alya", "Bob", "David", "Eve");
+//        System.out.println(names.stream().map(m->m.split("")).collect(Collectors.toList()));
+//        System.out.println(names.stream().map(m-> m.split("")).flatMap(Arrays::stream).collect(Collectors.toList()));
+
+//        Sum of all int
+//        List<Integer> numbers = Arrays.asList(3, 10, 7, 1, 9);
+//        System.out.println(numbers.stream().reduce(0,Integer::sum));
+
+//        list to map
+//        List<String> names = Arrays.asList("Alice", "Alya", "Bob", "David", "Eve");
+//        System.out.println(names.stream().collect(Collectors.toMap().toMap(n->n,String::length)));
+
+//        list to map count duplicate
+//        List<String> names = Arrays.asList("Alice", "Alya", "Bob", "David", "Eve", "Alice");
+//        Map<String, Integer> nameCounts1 = names.stream()
+//                .collect(Collectors.toMap(
+//                        name -> name,
+//                        name ->1,
+//                        Integer::sum,
+//                        LinkedHashMap::new));
+
+//        findFirst vs findAny
+//        List<String> names = Arrays.asList("Alice", "Alya", "Bob", "David", "Eve", "Alice");
+//        System.out.println(names.stream().findFirst());
+//        System.out.println(names.parallelStream().findAny());
+
+//        forEach vs forEachOrdered
+//        names.stream().forEachOrdered(System.out::println);
+//        System.out.println("----------------------------");
+//        names.parallelStream().forEach(System.out::println);
+
+//        how to group
+//        List<String> names = Arrays.asList("Alice", "Alya", "Bob", "David", "Eve", "Alice");
+//        System.out.println(names.stream().collect(Collectors.groupingBy(n->n.charAt(0))));
+
+//        remove special character from email
+        String email = "madhusudankryd!.1997@gma!il.com";
+        System.out.println("previous email is"+email);
+        System.out.println("after removal of special char"+email.chars()
+                .mapToObj(c->String.valueOf((char)c))
+                .filter(c->c.matches("[a-zA-Z0-9@.]"))
+                .collect(Collectors.joining()));
+    }
+
+    private static boolean isPrime(int i) {
+        if (i <= 1) return false;
+        return IntStream.rangeClosed(2, (int) Math.sqrt(i)).allMatch(n -> i % n != 0);
     }
 }
 
-class Employee{
+class Employee {
     int id;
     String name;
-    Employee(int id, String name) { this.id = id; this.name = name; }
+
+    Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
 

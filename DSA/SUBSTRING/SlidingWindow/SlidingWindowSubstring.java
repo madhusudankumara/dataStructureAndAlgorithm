@@ -1,4 +1,4 @@
-package java_collection.DSA.SUBSTRING;
+package java_collection.DSA.SUBSTRING.SlidingWindow;
 
 public class SlidingWindowSubstring {
     public static void main(String[] args) {
