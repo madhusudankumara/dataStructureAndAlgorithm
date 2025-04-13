@@ -1,6 +1,5 @@
-package java_collection.DSA;
+package java_collection.StreamApi;
 
-import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -185,12 +184,12 @@ public class StreamApi {
 //        System.out.println(names.stream().collect(Collectors.groupingBy(n->n.charAt(0))));
 
 //        remove special character from email
-        String email = "madhusudankryd!.1997@gma!il.com";
-        System.out.println("previous email is"+email);
-        System.out.println("after removal of special char"+email.chars()
-                .mapToObj(c->String.valueOf((char)c))
-                .filter(c->c.matches("[a-zA-Z0-9@.]"))
-                .collect(Collectors.joining()));
+//        String email = "madhusudankryd!.1997@gma!il.com";
+//        System.out.println("previous email is"+email);
+//        System.out.println("after removal of special char"+email.chars()
+//                .mapToObj(c->String.valueOf((char)c))
+//                .filter(c->c.matches("[a-zA-Z0-9@.]"))
+//                .collect(Collectors.joining()));
     }
 
     private static boolean isPrime(int i) {
