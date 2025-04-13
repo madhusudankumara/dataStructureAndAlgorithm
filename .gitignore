@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+/out/
+
+# Ignore IDE files
+.idea/
+*.iml
+
+# Ignore build output
+/out/
+*.class
+
+# Ignore system files
+.DS_Store
