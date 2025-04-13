@@ -1,5 +1,14 @@
 package java_collection.DSA;
 
+
+/*
+*
+* Floyd’s Cycle Detection Algorithm is a classic example of the two pointers method.
+*
+* O(n) — You only go through the list once, and inside the cycle, it takes at most k steps (size of cycle) to detect it.
+*
+* */
+
 public class FloydCycleDetectionAlgorithm {
     public static void main(String[] args) {
         Node head = new Node(1);
@@ -9,7 +18,6 @@ public class FloydCycleDetectionAlgorithm {
         head.next.next.next.next = head.next;
 
         Boolean detectCycle = detectCycle(head);
-
         System.out.println(detectCycle);
 
     }
@@ -18,7 +26,7 @@ public class FloydCycleDetectionAlgorithm {
         Node slow = node;
         Node fast = node;
 
-        while (fast != null || fast.next != null) {
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
             if (fast == slow) {
