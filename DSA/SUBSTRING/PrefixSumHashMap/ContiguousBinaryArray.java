@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class ContiguousBinaryArray {
     public static void main(String[] args) {
-        int a[] = {1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1};
+        int[] a = {1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1};
         System.out.println(a.length+"\n"+Arrays.toString(a));
         System.out.println(Arrays.toString(contiguousBinaryArray(a)));
     }

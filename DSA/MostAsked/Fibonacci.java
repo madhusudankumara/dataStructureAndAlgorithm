@@ -22,7 +22,7 @@ public class Fibonacci {
                 .limit(number)
                 .map(fib -> fib[0])
                 .toList();
-        System.out.printf("\n");
+        System.out.print("\n");
         System.out.println(fibonacci);
 
     }

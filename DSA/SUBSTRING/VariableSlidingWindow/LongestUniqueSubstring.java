@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LongestUniqueSubstring {
-    public static void main(String args[]) throws IOException {
+    public static void main(String[] args) throws IOException {
         String s = "abdefgabef";
         System.out.println(getLongestUniqueSubstring(s));
     }

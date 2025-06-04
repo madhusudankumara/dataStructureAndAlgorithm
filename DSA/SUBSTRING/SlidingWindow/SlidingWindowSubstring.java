@@ -2,7 +2,7 @@ package java_collection.DSA.SUBSTRING.SlidingWindow;
 
 public class SlidingWindowSubstring {
     public static void main(String[] args) {
-        String str = new String("abcd");
+        String str = "abcd";
         int k = 3;
         generateFixedLengthSubstrings(str, k);
     }

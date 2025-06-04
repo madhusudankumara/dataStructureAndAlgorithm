@@ -1,5 +1,14 @@
 package java_collection.DSA.MostAsked;
 
+
+/*
+
+Given a string s and a pattern p, implement wildcard pattern matching with support for:
+
+    '?' – Matches any single character.
+    '*' – Matches any sequence of characters (including the empty sequence).
+
+*/
 public class WildcardMatcher {
     public static void main(String[] args) {
         String str1 = "a*b?d";

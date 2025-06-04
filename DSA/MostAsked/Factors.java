@@ -10,7 +10,7 @@ public class Factors {
         System.out.println("Give number to find factor: ");
         int number = scn.nextInt();
         Set<Integer> factor = printFactor(number);
-        System.out.printf("\n");
+        System.out.print("\n");
         System.out.println(factor);
         List<Integer> list = new ArrayList<>(factor);
         Collections.reverse(list);
@@ -26,7 +26,7 @@ public class Factors {
                 System.out.printf(i + " ");
                 set.add(i);
                 if (i != number / i) {
-                    System.out.printf(number / i + " ");
+                    System.out.print(number / i + " ");
                     set.add(number/i);
                 }
             }
